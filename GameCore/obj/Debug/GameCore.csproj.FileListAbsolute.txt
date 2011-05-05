@@ -1,0 +1,5 @@
+J:\Develop\Visual Studio 2010\Projects\funya3\GameCore\bin\Debug\GameCore.dll
+J:\Develop\Visual Studio 2010\Projects\funya3\GameCore\bin\Debug\GameCore.pdb
+J:\Develop\Visual Studio 2010\Projects\funya3\GameCore\obj\Debug\ResolveAssemblyReference.cache
+J:\Develop\Visual Studio 2010\Projects\funya3\GameCore\obj\Debug\GameCore.dll
+J:\Develop\Visual Studio 2010\Projects\funya3\GameCore\obj\Debug\GameCore.pdb

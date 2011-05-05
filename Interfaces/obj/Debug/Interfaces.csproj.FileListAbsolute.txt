@@ -1,0 +1,5 @@
+J:\Develop\Visual Studio 2010\Projects\funya3\Interfaces\obj\Debug\ResolveAssemblyReference.cache
+J:\Develop\Visual Studio 2010\Projects\funya3\Interfaces\bin\Debug\Interfaces.dll
+J:\Develop\Visual Studio 2010\Projects\funya3\Interfaces\bin\Debug\Interfaces.pdb
+J:\Develop\Visual Studio 2010\Projects\funya3\Interfaces\obj\Debug\Interfaces.dll
+J:\Develop\Visual Studio 2010\Projects\funya3\Interfaces\obj\Debug\Interfaces.pdb
