@@ -8,7 +8,7 @@
     <ProjectGuid>{6CEEFED7-F420-477F-9EB7-F51272A5829E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MifuminSoft.funya3</RootNamespace>
+    <RootNamespace>MifuminSoft.funya3.Core</RootNamespace>
     <AssemblyName>GameCore</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Map.cs" />
     <Compile Include="MapObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
