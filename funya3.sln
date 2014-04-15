@@ -2,6 +2,11 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameCore", "GameCore\GameCore.csproj", "{6CEEFED7-F420-477F-9EB7-F51272A5829E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{83713527-D152-4F8C-94C4-5D0488DF3985} = {83713527-D152-4F8C-94C4-5D0488DF3985}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonInput", "CommonInput\CommonInput.csproj", "{83713527-D152-4F8C-94C4-5D0488DF3985}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,6 +16,10 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6CEEFED7-F420-477F-9EB7-F51272A5829E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6CEEFED7-F420-477F-9EB7-F51272A5829E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83713527-D152-4F8C-94C4-5D0488DF3985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83713527-D152-4F8C-94C4-5D0488DF3985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83713527-D152-4F8C-94C4-5D0488DF3985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83713527-D152-4F8C-94C4-5D0488DF3985}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
