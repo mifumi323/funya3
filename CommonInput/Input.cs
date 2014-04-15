@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace MifuminSoft.funya3.Input
 {
-    class KeyState
+    public class KeyState
     {
         public bool Pressed { get; private set; }
         public bool Pushed { get; private set; }
@@ -20,7 +20,7 @@ namespace MifuminSoft.funya3.Input
         }
     }
 
-    enum Key
+    public enum KeyType
     {
         Exit,
         Pause,
@@ -39,33 +39,33 @@ namespace MifuminSoft.funya3.Input
         Record,
     }
 
-    abstract class Input
+    public abstract class Input
     {
-        private Dictionary<Key, KeyState> KeyState;
+        private Dictionary<KeyType, KeyState> KeyState;
 
         public Input()
         {
-            KeyState = new Dictionary<Key, KeyState>();
-            foreach (var key in typeof(Key).GetFields(BindingFlags.Public | BindingFlags.Static))
+            KeyState = new Dictionary<KeyType, KeyState>();
+            foreach (var key in typeof(KeyType).GetFields(BindingFlags.Public | BindingFlags.Static))
             {
-                if (key.IsLiteral) KeyState[(Key)key.GetValue(null)] = new KeyState();
+                if (key.IsLiteral) KeyState[(KeyType)key.GetValue(null)] = new KeyState();
             }
         }
 
         /// <summary>キーが今押されているかどうかを返す。</summary>
         /// <param name="key">キー</param>
         /// <returns>キーが今押されているかどうか</returns>
-        public bool IsKeyPressed(Key key) { return KeyState[key].Pressed; }
+        public bool IsKeyPressed(KeyType key) { return KeyState[key].Pressed; }
 
         /// <summary>キーがたった今押されたかどうかを返す。</summary>
         /// <param name="key">キー</param>
         /// <returns>キーがたった今押されたかどうか</returns>
-        public bool IsKeyPushed(Key key) { return KeyState[key].Pushed; }
+        public bool IsKeyPushed(KeyType key) { return KeyState[key].Pushed; }
 
         /// <summary>キーがたった今離されたかどうかを返す。</summary>
         /// <param name="key">キー</param>
         /// <returns>キーがたった今離されたかどうか</returns>
-        public bool IsKeyReleased(Key key) { return KeyState[key].Released; }
+        public bool IsKeyReleased(KeyType key) { return KeyState[key].Released; }
 
         /// <summary>入力状態を更新します</summary>
         public void Update()
@@ -75,12 +75,12 @@ namespace MifuminSoft.funya3.Input
 
         /// <summary>派生クラスでキーの状態を更新するコードを実装してください。</summary>
         /// <param name="key">キー</param>
-        protected abstract void UpdateKey(Key key);
+        protected abstract void UpdateKey(KeyType key);
 
         /// <summary>キーの状態を設定します。UpdateKeyから呼び出してください。</summary>
         /// <param name="key">キー</param>
         /// <param name="pressed">キーが今押されているかどうか</param>
-        protected void SetKeyStatus(Key key, bool pressed)
+        protected void SetKeyStatus(KeyType key, bool pressed)
         {
             KeyState[key].SetState(pressed);
         }
