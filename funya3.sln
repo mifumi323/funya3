@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameRule", "GameRule\GameRu
 		{83713527-D152-4F8C-94C4-5D0488DF3985} = {83713527-D152-4F8C-94C4-5D0488DF3985}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightMain", "SilverlightMain\SilverlightMain.csproj", "{B1BD5AC7-16E4-4AC9-939F-D2D6837132D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,10 @@ Global
 		{C3D6FF46-2C17-4A63-BB12-3B5690751763}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3D6FF46-2C17-4A63-BB12-3B5690751763}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3D6FF46-2C17-4A63-BB12-3B5690751763}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1BD5AC7-16E4-4AC9-939F-D2D6837132D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1BD5AC7-16E4-4AC9-939F-D2D6837132D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1BD5AC7-16E4-4AC9-939F-D2D6837132D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1BD5AC7-16E4-4AC9-939F-D2D6837132D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
