@@ -1,16 +1,17 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Resources;
 
 // アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
-[assembly: AssemblyTitle("SilverlightMain")]
+[assembly: AssemblyTitle("ふにゃさん")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("MouseComputer PC")]
-[assembly: AssemblyProduct("SilverlightMain")]
-[assembly: AssemblyCopyright("Copyright © MouseComputer PC 2014")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ふにゃさん")]
+[assembly: AssemblyCopyright("Copyright © Mifumi Matsuda 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,3 +34,4 @@ using System.Runtime.InteropServices;
 // 既定値にすることができます。
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: NeutralResourcesLanguageAttribute("")]
