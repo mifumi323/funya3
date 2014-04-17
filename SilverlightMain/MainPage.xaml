@@ -4,9 +4,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="240" d:DesignWidth="320">
+    d:DesignHeight="240" d:DesignWidth="320" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
 
     <Grid x:Name="LayoutRoot" Background="Black">
-
+        <Canvas Height="240" HorizontalAlignment="Left" Margin="0" Name="canvas1" VerticalAlignment="Top" Width="320" DataContext="{Binding}" OpacityMask="{x:Null}" Background="#FFB39F82"></Canvas>
     </Grid>
 </UserControl>
