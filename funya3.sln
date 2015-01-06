@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonInput", "CommonInput\CommonInput.csproj", "{83713527-D152-4F8C-94C4-5D0488DF3985}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameRule", "GameRule\GameRule.csproj", "{C3D6FF46-2C17-4A63-BB12-3B5690751763}"
@@ -9,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameRule", "GameRule\GameRu
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightMain", "SilverlightMain\SilverlightMain.csproj", "{B1BD5AC7-16E4-4AC9-939F-D2D6837132D8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{83713527-D152-4F8C-94C4-5D0488DF3985} = {83713527-D152-4F8C-94C4-5D0488DF3985}
+		{C3D6FF46-2C17-4A63-BB12-3B5690751763} = {C3D6FF46-2C17-4A63-BB12-3B5690751763}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonGraphics", "CommonGraphics\CommonGraphics.csproj", "{F224F6EF-2104-49FD-BCFC-C61EC059A019}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +36,10 @@ Global
 		{B1BD5AC7-16E4-4AC9-939F-D2D6837132D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1BD5AC7-16E4-4AC9-939F-D2D6837132D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1BD5AC7-16E4-4AC9-939F-D2D6837132D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F224F6EF-2104-49FD-BCFC-C61EC059A019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F224F6EF-2104-49FD-BCFC-C61EC059A019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F224F6EF-2104-49FD-BCFC-C61EC059A019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F224F6EF-2104-49FD-BCFC-C61EC059A019}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

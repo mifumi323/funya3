@@ -1,4 +1,6 @@
+Backup/
 bin/
 obj/
 *.user
 *.suo
+UpgradeLog.htm
