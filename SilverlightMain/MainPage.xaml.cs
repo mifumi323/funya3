@@ -10,15 +10,25 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Windows.Data;
+using System.ComponentModel;
+using System.Threading;
+using MifuminSoft.funya3.Utility;
+using System.Threading.Tasks;
 
 namespace MifuminSoft.funya3.App
 {
     public partial class MainPage : UserControl
     {
-        long frame = 0;
-        long count = 0;
-        long prevTime = 0;
-        double fps;
+        FpsCounter fpsCounter = new FpsCounter();
+
+        /// <summary>ゲームのメインループ</summary>
+        Thread mainLoop = null;
+        /// <summary>描画ループ</summary>
+        Thread drawLoop = null;
+        /// <summary>描画可能になったことの通知</summary>
+        AutoResetEvent drawNotifier = null;
+
+        Image mainImage = null;
 
         public string DebugText
         {
@@ -37,13 +47,20 @@ namespace MifuminSoft.funya3.App
         {
             InitializeComponent();
 
+            // タイマー等の設定
             CompositionTarget.Rendering += new EventHandler(CompositionTarget_Rendering);
+            drawNotifier = new AutoResetEvent(false);
+            mainLoop = new Thread(MainLoop);
         }
 
         void CompositionTarget_Rendering(object sender, EventArgs e)
         {
-            if (frame == 0)
+            if (fpsCounter.Frame == 0)
             {
+                mainImage = new Image();
+                canvas1.Children.Add(mainImage);
+                ;
+
                 TextBlock tb = new TextBlock();
                 Binding bind = new Binding();
                 bind.Path = new PropertyPath("DebugText");
@@ -53,26 +70,20 @@ namespace MifuminSoft.funya3.App
             }
             else
             {
-                Ellipse el = new Ellipse();
-                el.Width = el.Height = 32;
-                el.Fill = new SolidColorBrush(Color.FromArgb((byte)random.Next(256), (byte)random.Next(256), (byte)random.Next(256), (byte)random.Next(256)));
-                canvas1.Children.Add(el);
-                Canvas.SetLeft(el, random.NextDouble() * (canvas1.ActualWidth - el.Width));
-                Canvas.SetTop(el, random.NextDouble() * (canvas1.ActualHeight - el.Height) + 16);
             }
-            frame++;
+            fpsCounter.Step();
 
-            // FPS計測
-            if (count == 0)
-            {
-                count = 60;
-                long time = DateTime.Now.Ticks;
-                fps = 10000000.0 * count / (time - prevTime);
-                prevTime = time;
-            }
-            count--;
+            DebugText = string.Format("{0} {1} {2} {3}", mainImage.ActualWidth, mainImage.ActualHeight, fpsCounter.Frame, fpsCounter.Fps);
+        }
 
-            DebugText = string.Format("{0} {1}", frame, fps);
+        void MainLoop()
+        {
+            ;
+        }
+
+        void DrawLoop()
+        {
+            ;
         }
     }
 }

@@ -96,6 +96,24 @@
   <ItemGroup>
     <None Include="Properties\OutOfBrowserSettings.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonGraphics\CommonGraphics.csproj">
+      <Project>{f224f6ef-2104-49fd-bcfc-c61ec059a019}</Project>
+      <Name>CommonGraphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonInput\CommonInput.csproj">
+      <Project>{83713527-d152-4f8c-94c4-5d0488df3985}</Project>
+      <Name>CommonInput</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonUtility\CommonUtility.csproj">
+      <Project>{f077e653-b8cb-4f69-a389-7b9d89a32bc6}</Project>
+      <Name>CommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameRule\GameRule.csproj">
+      <Project>{c3d6ff46-2c17-4a63-bb12-3b5690751763}</Project>
+      <Name>GameRule</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

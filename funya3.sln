@@ -14,9 +14,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightMain", "Silverli
 	ProjectSection(ProjectDependencies) = postProject
 		{83713527-D152-4F8C-94C4-5D0488DF3985} = {83713527-D152-4F8C-94C4-5D0488DF3985}
 		{C3D6FF46-2C17-4A63-BB12-3B5690751763} = {C3D6FF46-2C17-4A63-BB12-3B5690751763}
+		{F077E653-B8CB-4F69-A389-7B9D89A32BC6} = {F077E653-B8CB-4F69-A389-7B9D89A32BC6}
+		{F224F6EF-2104-49FD-BCFC-C61EC059A019} = {F224F6EF-2104-49FD-BCFC-C61EC059A019}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonGraphics", "CommonGraphics\CommonGraphics.csproj", "{F224F6EF-2104-49FD-BCFC-C61EC059A019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonUtility", "CommonUtility\CommonUtility.csproj", "{F077E653-B8CB-4F69-A389-7B9D89A32BC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +44,10 @@ Global
 		{F224F6EF-2104-49FD-BCFC-C61EC059A019}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F224F6EF-2104-49FD-BCFC-C61EC059A019}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F224F6EF-2104-49FD-BCFC-C61EC059A019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F077E653-B8CB-4F69-A389-7B9D89A32BC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F077E653-B8CB-4F69-A389-7B9D89A32BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F077E653-B8CB-4F69-A389-7B9D89A32BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F077E653-B8CB-4F69-A389-7B9D89A32BC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
