@@ -7,6 +7,6 @@
     d:DesignHeight="240" d:DesignWidth="320" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
 
     <Grid x:Name="LayoutRoot" Background="Black">
-        <Canvas Height="240" Margin="0" Name="canvas1" Width="320" DataContext="{Binding}" OpacityMask="{x:Null}" Background="#FFB39F82" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Canvas Margin="0" Name="canvas1" DataContext="{Binding}" OpacityMask="{x:Null}" Background="#FFB39F82"/>
     </Grid>
 </UserControl>

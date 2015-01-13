@@ -31,7 +31,6 @@ namespace MifuminSoft.funya3.App
 
         private void Application_Exit(object sender, EventArgs e)
         {
-
         }
 
         private void Application_UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)
