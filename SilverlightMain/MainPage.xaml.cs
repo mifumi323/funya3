@@ -85,10 +85,16 @@ namespace MifuminSoft.funya3.App
         {
             while (isAlive)
             {
+                OnFrame();
+                gameFpsCounter.Step();
                 drawNotifier.Set();
                 fpsTimer.Wait();
-                gameFpsCounter.Step();
             }
+        }
+
+        private void OnFrame()
+        {
+            // まだ何も作っていない
         }
 
         internal void StopMainLoop()
