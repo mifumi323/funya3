@@ -29,7 +29,10 @@ namespace MifuminSoft.funya3.Core
     public class MapObject
     {
         /// <summary>マップオブジェクトのタイプ</summary>
-        MapObjectType ObjectType { get; private set; }
+        public MapObjectType ObjectType { get; private set; }
+
+        /// <summary>有効なオブジェクトかどうか</summary>
+        public bool IsValid { get; private set; }
 
         /// <summary>所属するマップ</summary>
         public Map Parent { get; private set; }
@@ -55,6 +58,7 @@ namespace MifuminSoft.funya3.Core
         public MapObject(MapObjectType objectType, Map parent)
         {
             ObjectType = objectType;
+            IsValid = true;
             Parent = parent;
             X = Y = 0;
         }

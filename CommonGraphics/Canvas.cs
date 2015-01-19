@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MifuminSoft.funya3.Core
+namespace MifuminSoft.funya3.Graphics
 {
-    public class Map
+    public class Canvas
     {
     }
 }
