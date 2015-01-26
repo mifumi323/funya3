@@ -6,7 +6,7 @@ using System.Text;
 namespace MifuminSoft.funya3.Graphics
 {
     /// <summary>表示要素 - 表示されるもの</summary>
-    public class Element
+    public class GameSprite
     {
         /// <summary>Zオーダー</summary>
         private int zOrder;
@@ -19,6 +19,6 @@ namespace MifuminSoft.funya3.Graphics
         }
 
         /// <summary>所属するキャンバス</summary>
-        public Canvas Canvas { get; set; }
+        public GameCanvas Canvas { get; set; }
     }
 }

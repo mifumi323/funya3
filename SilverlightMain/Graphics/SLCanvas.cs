@@ -11,11 +11,11 @@ using System.Windows.Shapes;
 
 namespace MifuminSoft.funya3.App.Graphics
 {
-    public class SLCanvas : MifuminSoft.funya3.Graphics.Canvas
+    public class SLGameCanvas : MifuminSoft.funya3.Graphics.GameCanvas
     {
         /// <summary>対象となるSilverlightキャンバス</summary>
         private Canvas target;
-        public SLCanvas(Canvas target)
+        public SLGameCanvas(Canvas target)
         {
             this.target = target;
         }

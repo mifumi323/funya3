@@ -35,7 +35,7 @@ namespace MifuminSoft.funya3.App
         /// <summary>メインループが存続しているか</summary>
         bool isAlive = true;
 
-        SLCanvas slCanvas = null;
+        SLGameCanvas slCanvas = null;
 
         public string DebugText
         {
@@ -65,7 +65,7 @@ namespace MifuminSoft.funya3.App
 #endif
 
             // キャンバスの設定
-            slCanvas = new SLCanvas(mainScreen);
+            slCanvas = new SLGameCanvas(mainScreen);
 
             // タイマー等の設定
             CompositionTarget.Rendering += new EventHandler(CompositionTarget_Rendering);
