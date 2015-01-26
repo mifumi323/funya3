@@ -8,16 +8,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using MifuminSoft.funya3.Graphics;
 
 namespace MifuminSoft.funya3.App.Graphics
 {
-    public class SLGameCanvas : MifuminSoft.funya3.Graphics.GameCanvas
+    public class SLGameSprite : GameSprite
     {
-        /// <summary>対象となるSilverlightキャンバス</summary>
-        private Canvas target;
-        public SLGameCanvas(Canvas target)
-        {
-            this.target = target;
-        }
+
     }
 }

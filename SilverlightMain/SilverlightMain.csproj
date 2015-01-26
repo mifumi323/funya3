@@ -75,7 +75,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Graphics\SLCanvas.cs" />
+    <Compile Include="Graphics\SLGameCanvas.cs" />
+    <Compile Include="Graphics\SLGameSprite.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

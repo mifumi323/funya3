@@ -6,7 +6,7 @@ using System.Text;
 namespace MifuminSoft.funya3.Graphics
 {
     /// <summary>レイヤー - 絵の前後関係を管理する</summary>
-    public class Layer
+    public class GameLayer : IDisposable
     {
         /// <summary>表示レベル - レイヤーの前後関係を決める数値</summary>
         private int level;
@@ -15,7 +15,7 @@ namespace MifuminSoft.funya3.Graphics
 
         /// <summary>レイヤーの初期化</summary>
         /// <param name="level">表示レベル</param>
-        public Layer(int level)
+        public GameLayer(int level)
         {
             this.level = level;
         }
@@ -23,6 +23,20 @@ namespace MifuminSoft.funya3.Graphics
         public void Add(GameSprite element)
         {
             elements.Add(element);
+        }
+
+        public void Dispose()
+        {
+            Clear();
+        }
+
+        public void Clear()
+        {
+            foreach (var sprite in elements)
+            {
+                if (sprite.DisposeOnRemove) sprite.Dispose();
+            }
+            elements.Clear();
         }
     }
 }

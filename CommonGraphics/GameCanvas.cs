@@ -9,7 +9,7 @@ namespace MifuminSoft.funya3.Graphics
     public class GameCanvas
     {
         /// <summary>レイヤー</summary>
-        Dictionary<int, Layer> layers = new Dictionary<int, Layer>();
+        Dictionary<int, GameLayer> layers = new Dictionary<int, GameLayer>();
 
         /// <summary>表示要素をキャンバスに置く</summary>
         /// <param name="element">表示要素</param>
@@ -17,10 +17,10 @@ namespace MifuminSoft.funya3.Graphics
         /// <returns>表示要素(elementそのもの)</returns>
         public GameSprite PutElement(GameSprite element, int level = 0)
         {
-            Layer layer;
+            GameLayer layer;
             if (!layers.ContainsKey(level))
             {
-                layer = layers[level] = new Layer(level);
+                layer = layers[level] = new GameLayer(level);
             }
             else
             {
@@ -29,6 +29,15 @@ namespace MifuminSoft.funya3.Graphics
             layer.Add(element);
             element.Canvas = this;
             return element;
+        }
+
+        public void Clear()
+        {
+            foreach (var layer in layers)
+            {
+                layer.Value.Clear();
+            }
+            layers.Clear();
         }
     }
 }
