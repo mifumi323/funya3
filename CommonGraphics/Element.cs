@@ -8,5 +8,17 @@ namespace MifuminSoft.funya3.Graphics
     /// <summary>表示要素 - 表示されるもの</summary>
     public class Element
     {
+        /// <summary>Zオーダー</summary>
+        private int zOrder;
+
+        /// <summary>Zオーダー</summary>
+        public int ZOrder
+        {
+            get { return zOrder; }
+            set { zOrder = value; }
+        }
+
+        /// <summary>所属するキャンバス</summary>
+        public Canvas Canvas { get; set; }
     }
 }

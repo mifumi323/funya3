@@ -27,6 +27,7 @@ namespace MifuminSoft.funya3.Graphics
                 layer = layers[level];
             }
             layer.Add(element);
+            element.Canvas = this;
             return element;
         }
     }

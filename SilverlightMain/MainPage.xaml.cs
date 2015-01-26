@@ -61,11 +61,11 @@ namespace MifuminSoft.funya3.App
             bind.Path = new PropertyPath("DebugText");
             tb.DataContext = this;
             tb.SetBinding(TextBlock.TextProperty, bind);
-            canvas1.Children.Add(tb);
+            mainScreen.Children.Add(tb);
 #endif
 
             // キャンバスの設定
-            slCanvas = new SLCanvas(canvas1);
+            slCanvas = new SLCanvas(mainScreen);
 
             // タイマー等の設定
             CompositionTarget.Rendering += new EventHandler(CompositionTarget_Rendering);

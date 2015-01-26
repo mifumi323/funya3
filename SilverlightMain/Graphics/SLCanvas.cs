@@ -13,7 +13,8 @@ namespace MifuminSoft.funya3.App.Graphics
 {
     public class SLCanvas : MifuminSoft.funya3.Graphics.Canvas
     {
-        Canvas target;
+        /// <summary>対象となるSilverlightキャンバス</summary>
+        private Canvas target;
         public SLCanvas(Canvas target)
         {
             this.target = target;
