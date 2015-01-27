@@ -6,7 +6,7 @@ using System.Text;
 namespace MifuminSoft.funya3.Graphics
 {
     /// <summary>表示要素 - 表示されるもの</summary>
-    public abstract class GameSprite : IDisposable
+    public abstract class Sprite : IDisposable
     {
         /// <summary>Zオーダー</summary>
         private int zOrder;
@@ -69,7 +69,7 @@ namespace MifuminSoft.funya3.Graphics
         }
         
         /// <summary>所属するキャンバス</summary>
-        public GameCanvas Canvas { get; set; }
+        public Canvas Canvas { get; set; }
 
         public virtual void Dispose() { }
     }

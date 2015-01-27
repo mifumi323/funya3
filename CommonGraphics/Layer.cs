@@ -6,7 +6,7 @@ using System.Text;
 namespace MifuminSoft.funya3.Graphics
 {
     /// <summary>レイヤー - 絵の前後関係を管理する</summary>
-    public class GameLayer : IDisposable
+    public class Layer : IDisposable
     {
         /// <summary>1レイヤーに表示する表示要素の想定最大数</summary>
         public const int SpriteMax = 10000;
@@ -14,18 +14,18 @@ namespace MifuminSoft.funya3.Graphics
         /// <summary>表示レベル - レイヤーの前後関係を決める数値</summary>
         private int level;
         /// <summary>要素 - このレイヤーの中にある表示要素</summary>
-        List<GameSprite> sprites = new List<GameSprite>();
+        List<Sprite> sprites = new List<Sprite>();
 
         /// <summary>レイヤーの初期化</summary>
         /// <param name="level">表示レベル</param>
-        public GameLayer(int level)
+        public Layer(int level)
         {
             this.level = level;
         }
 
         /// <summary>表示要素を追加する</summary>
         /// <param name="sprite">表示要素</param>
-        public void Add(GameSprite sprite)
+        public void Add(Sprite sprite)
         {
             sprite.ZOrder = sprites.Count > 0 ? sprites.Last().ZOrder + 1 : LevelToZOrder(level);
             sprites.Add(sprite);
