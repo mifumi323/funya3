@@ -31,6 +31,7 @@ namespace MifuminSoft.funya3.Graphics
             return element;
         }
 
+        /// <summary>内容をクリアする</summary>
         public void Clear()
         {
             foreach (var layer in layers)
