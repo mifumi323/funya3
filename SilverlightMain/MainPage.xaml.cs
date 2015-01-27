@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Net;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
-using System.Windows.Shapes;
-using System.Windows.Data;
-using System.ComponentModel;
-using System.Threading;
-using MifuminSoft.funya3.Utility;
-using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using MifuminSoft.funya3.App.Graphics;
+using MifuminSoft.funya3.Utility;
 
 namespace MifuminSoft.funya3.App
 {
@@ -33,6 +34,8 @@ namespace MifuminSoft.funya3.App
         AutoResetEvent drawNotifier = new AutoResetEvent(false);
         /// <summary>メインループが存続しているか</summary>
         bool isAlive = true;
+
+        SLGameCanvas slCanvas = null;
 
         public string DebugText
         {
@@ -58,8 +61,11 @@ namespace MifuminSoft.funya3.App
             bind.Path = new PropertyPath("DebugText");
             tb.DataContext = this;
             tb.SetBinding(TextBlock.TextProperty, bind);
-            canvas1.Children.Add(tb);
+            mainScreen.Children.Add(tb);
 #endif
+
+            // キャンバスの設定
+            slCanvas = new SLGameCanvas(mainScreen);
 
             // タイマー等の設定
             CompositionTarget.Rendering += new EventHandler(CompositionTarget_Rendering);

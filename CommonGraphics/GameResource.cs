@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MifuminSoft.funya3.Graphics
 {
-    public class Canvas
+    public class GameResource
     {
     }
 }
