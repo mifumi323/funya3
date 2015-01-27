@@ -18,6 +18,7 @@ namespace MifuminSoft.funya3.Graphics
             set { zOrder = value; }
         }
 
+        /// <summary>キャンバスから削除されるときにDisposeを行うか否か</summary>
         private bool disposeOnRemove;
 
         /// <summary>キャンバスから削除されるときにDisposeを行うか否かを設定・取得します</summary>
@@ -27,6 +28,46 @@ namespace MifuminSoft.funya3.Graphics
             set { disposeOnRemove = value; }
         }
 
+        /// <summary>左端の座標</summary>
+        private double left;
+
+        /// <summary>左端の座標</summary>
+        public double Left
+        {
+            get { return left; }
+            set { left = value; }
+        }
+
+        /// <summary>上端の座標</summary>
+        private double top;
+
+        /// <summary>上端の座標</summary>
+        public double Top
+        {
+            get { return top; }
+            set { top = value; }
+        }
+
+        /// <summary>幅</summary>
+        private double width;
+
+        /// <summary>幅</summary>
+        public double Width
+        {
+            get { return width; }
+            set { width = value; }
+        }
+
+        /// <summary>高さ</summary>
+        private double height;
+
+        /// <summary>高さ</summary>
+        public double Height
+        {
+            get { return height; }
+            set { height = value; }
+        }
+        
         /// <summary>所属するキャンバス</summary>
         public GameCanvas Canvas { get; set; }
 
