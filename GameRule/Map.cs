@@ -14,7 +14,7 @@ namespace MifuminSoft.funya3.Core
         public bool HitRight { get; private set; }
         public bool HitDeath { get; private set; }
 
-        public GameResource Resource { get; set; }
+        public Image Resource { get; set; }
         public int Pattern { get; set; }
     }
 
