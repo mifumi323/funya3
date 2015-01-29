@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using MifuminSoft.funya3.Graphics;
 
 namespace MifuminSoft.funya3.Core
 {
@@ -12,6 +13,9 @@ namespace MifuminSoft.funya3.Core
         public bool HitLeft { get; private set; }
         public bool HitRight { get; private set; }
         public bool HitDeath { get; private set; }
+
+        public Image Resource { get; set; }
+        public int Pattern { get; set; }
     }
 
     public class MapData
