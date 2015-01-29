@@ -75,6 +75,39 @@ namespace MifuminSoft.funya3.App
 
         void CompositionTarget_Rendering(object sender, EventArgs e)
         {
+            if (drawFpsCounter.Frame == 0)
+            {
+                // 初期配置
+                gameScreen.Width = mainScreen.ActualWidth;
+                gameScreen.Height = mainScreen.ActualHeight;
+                var image = new BitmapImage(new Uri("/funya3;component/Resource/Ice.png", UriKind.Relative));
+                int length = 200;
+                for (int x = 0; x < length; x++)
+                {
+                    for (int y = 0; y < length; y++)
+                    {
+                        var rect = new Rectangle();
+                        rect.Width = 32;
+                        rect.Height = 32;
+
+                        var brush = new ImageBrush();
+                        brush.AlignmentX = AlignmentX.Left;
+                        brush.AlignmentY = AlignmentY.Top;
+                        brush.ImageSource = image;
+                        var transform = new TranslateTransform();
+                        transform.X = -((x + y) % 3);
+                        brush.RelativeTransform = transform;
+                        brush.Stretch = Stretch.UniformToFill;
+                        rect.Fill = brush;
+                        //rect.Fill = new SolidColorBrush(Color.FromArgb(255, (byte)random.Next(256), (byte)random.Next(256), (byte)random.Next(256)));
+
+                        mainScreen.Children.Add(rect);
+                        Canvas.SetLeft(rect, x * gameScreen.ActualWidth / length);
+                        Canvas.SetTop(rect, y * (gameScreen.ActualHeight - 16) / length + 16);
+                        //rect.Visibility = System.Windows.Visibility.Collapsed;
+                    }
+                }
+            }
             if (drawNotifier.WaitOne(100))
             {
                 // 描画を行う

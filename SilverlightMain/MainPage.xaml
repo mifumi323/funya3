@@ -8,7 +8,7 @@
 
     <Grid x:Name="LayoutRoot">
         <Canvas Margin="0" x:Name="mainScreen" DataContext="{Binding}" OpacityMask="{x:Null}" Background="#FFB39F82">
-            <Canvas x:Name="gameScreen" Height="110" Canvas.Left="-48" Canvas.Top="-28" Width="191"/>
+            <Canvas x:Name="gameScreen" Height="110" Canvas.Left="0" Canvas.Top="0" Width="191"/>
         </Canvas>
     </Grid>
 </UserControl>
