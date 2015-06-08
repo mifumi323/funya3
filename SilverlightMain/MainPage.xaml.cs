@@ -78,6 +78,8 @@ namespace MifuminSoft.funya3.App
             if (drawNotifier.WaitOne(100))
             {
                 // 描画を行う
+                OnDraw();
+
                 drawFpsCounter.Step();
                 DebugText = string.Format("{0} {1:0.0} {2} {3:0.0}", gameFpsCounter.Frame, gameFpsCounter.Fps, drawFpsCounter.Frame, drawFpsCounter.Fps);
             }
@@ -85,6 +87,11 @@ namespace MifuminSoft.funya3.App
             {
                 // フレームスキップ
             }
+        }
+
+        private void OnDraw()
+        {
+            // まだ何も作っていない
         }
 
         void MainLoop()
